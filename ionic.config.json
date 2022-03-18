@@ -1,0 +1,7 @@
+{
+  "name": "cantina",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
