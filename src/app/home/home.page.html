@@ -76,7 +76,14 @@
 
   </div>
   <div class="text-center display-4 fw-bold mt-5">
-    Total R$ {{resultado}}
+    Total R$ {{resultado.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}
   </div>
+
+<div class="row d-flex mt-3">
+  <input type="number" class="w-100 mx-5" placeholder="Valor recebido pelo cliente:" [(ngModel)]="valorRecebido" (keyup)="calcularTroco()">
+</div>
+<div class="text-center display-4 fw-bold mt-5">
+  Troco <span [class.text-danger]="resultadoTroco < 0">{{resultadoTroco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</span>
+</div>
 
 </div>
